@@ -1,0 +1,85 @@
+.header{
+    nav{
+        position: fixed;
+        top: 0;
+        background-color: $richBlack ;
+        width: 100%;
+        text-align: center;
+        height: 3rem;
+    }
+
+    
+    &__toggle{
+        > span{
+            display: block;
+            text-align: right;
+            width: 26px;
+            height: 2px;
+            background-color: white;
+            transition: all 300ms ease-in-out;
+            transform-origin: 3px 1px;
+            &:not(:last-child){
+                margin-bottom: 5px;
+            }
+        }
+    }
+    &.open{
+        .header__toggle{
+            > span:first-child{
+                transform: rotate(45deg);
+            }
+            > span:last-child{
+                transform: rotate(-45deg);
+            }
+            > span:nth-child(2){
+                opacity: 0;
+            }
+        }
+    }
+    &__logo{
+        img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: $silverPink;
+            border-radius: 20px;
+            margin: 0.5rem;
+            margin-left: 2rem;
+            width: 2.125rem;
+            height: 2.125rem;
+        }
+    }
+
+    &__links{
+        flex: 1;
+        a{
+            padding: 30px;
+            transition: all 300ms ease-in-out;
+            position: relative;
+            color: white;
+            font-size: 18px;
+            &:not(:last-child){
+                margin-right: 5%;
+            }
+
+            &:hover{
+                background-color: $blackCofee;
+                &::before{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+.overlay{
+    opacity: 0;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-color: $blackCofee;
+    background: linear-gradient($blackCofee,transparent);
+}

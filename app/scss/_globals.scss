@@ -1,0 +1,90 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Sansita Swashed', cursive;
+    line-height: 1.3;
+    font-size: 16px;
+    font-weight: 300;
+
+    // Background
+    background-image: url("/images/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center top;
+    
+}
+
+a, a:hover, a:visited{
+    text-decoration: none;
+}
+
+.container{
+    padding: 1rem;
+}
+
+p{
+    margin: 0;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+h1{
+    margin: 0;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size: 2rem;
+}
+h2{
+    margin: 0;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+// Visibility
+
+.hide-for-mobile{
+    @include breakpoints-down(medium){
+        display: none;
+    }
+}
+
+.hide-for-desktop{
+    @include breakpoints-up(large){
+        display: none;
+    }
+}
+
+
+//flexboxstyles
+
+.flex{
+    display: flex;
+
+    &-jc-sb{
+        justify-content: space-between;
+    }
+
+    &-jc-c{
+        justify-content: center;
+    }
+
+    &-ai-c{
+        align-items: center;
+    }
+}
+
+
+.noscroll{
+    overflow: hidden;
+}
