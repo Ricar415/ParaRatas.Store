@@ -19,8 +19,9 @@ body{
     // Background
     background-image: url("/images/fondo.jpg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-position: center top;
+    background-color: $silverPink;
     
 }
 
