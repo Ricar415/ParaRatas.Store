@@ -377,16 +377,29 @@ h2 {
   border-color: #C3B3AC;
   margin-bottom: 1rem;
   padding-left: 1rem;
+  padding-right: 0.5rem;
   width: 100%;
 }
 
 .productos_item img {
   margin-top: 1rem;
-  float: left;
   max-width: 100%;
-  width: 20%;
-  height: 20%;
   cursor: pointer;
+}
+
+@media (min-width: 40em) {
+  .productos_item img {
+    float: left;
+    width: 20%;
+    height: 20%;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .productos_item img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .productos_item .text {
@@ -395,12 +408,26 @@ h2 {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 39.9375em) {
+  .productos_item .text {
+    margin-left: 0%;
+    padding-left: 0%;
+  }
+}
+
 .productos_item .text h4 {
   color: #796157;
 }
 
 .productos_item .text li {
   margin-bottom: 0.7rem;
+}
+
+@media (max-width: 39.9375em) {
+  .productos_item .text ul {
+    margin-left: 1rem;
+    padding-left: 0%;
+  }
 }
 
 .productos_item .text p {
@@ -417,12 +444,24 @@ h2 {
   cursor: pointer;
 }
 
+@media (max-width: 39.9375em) {
+  .productos_item .text .precio {
+    margin-left: 5%;
+  }
+}
+
 .productos_item .text .precio_antiguo {
   margin-left: 75%;
   margin-bottom: 1rem;
   color: #383338;
   cursor: pointer;
   text-decoration: line-through;
+}
+
+@media (max-width: 63.9375em) {
+  .productos_item .text .precio_antiguo {
+    margin-left: 5%;
+  }
 }
 
 .productos_item .text .amazon_button {
@@ -448,6 +487,12 @@ h2 {
   text-align: center;
   text-decoration: none !important;
   color: black;
+}
+
+@media (max-width: 63.9375em) {
+  .productos_item .text .amazon_button {
+    margin-left: 5%;
+  }
 }
 
 .productos_item .text .amazon_button :visited {
